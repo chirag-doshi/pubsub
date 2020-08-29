@@ -28,7 +28,7 @@ class PublishController extends Controller
             return $this->postSubcriptions($subscribers, $request);
         }
 
-        return ['error' => 'No records found'];
+        return ['error' => 'No subscribers found'];
     }
 
     /**
