@@ -5,13 +5,23 @@ namespace App\Http\Controllers;
 
 
 use App\Event;
+use App\Events\TopicPublished;
+use App\Repositories\EventRepository;
 use App\Subscriber;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Log;
 
 class PublishController extends Controller
 {
+    public $eventRepository;
+
+    public function __construct(EventRepository $eventRepository)
+    {
+        $this->eventRepository = $eventRepository;
+    }
+
     /**
      * @param Request $request
      * @param $topic
@@ -20,41 +30,17 @@ class PublishController extends Controller
      */
     public function publish(Request $request, $topic): array
     {
-        $event = new Event;
-        $subscriber = new Subscriber;
-        $subscribers = $subscriber->getAllSubscribers($topic);
-
-        if ($subscribers->count() && $event->createEvent($request, $topic)) {
-            return $this->postSubcriptions($subscribers, $request);
+        Log::info('Somthing logged');
+        $eventPublished = $this->eventRepository->createEvent(json_encode($request->all()), $topic);
+        if ($eventPublished) {
+            event(new TopicPublished($eventPublished));
+            return ['success' => 'Event published'];
         }
-
-        return ['error' => 'No subscribers found'];
+        return ['failure' => 'Event not published'];
     }
 
-    /**
-     * @param $subscribers
-     * @param $request
-     * @return array
-     * @throws GuzzleException
-     */
-    public function postSubcriptions($subscribers, $request): array
+    public function receiveEvents(Request $request)
     {
-        $client = new Client();
-        $errorSubscriberUrl = [];
-        foreach ($subscribers as $subscriberRecord) {
-            try {
-                $client->request('POST',$subscriberRecord->url, ['json' =>  $request->all()]);
-            } catch (GuzzleException $exception) {
-                $errorSubscriberUrl = [$subscriberRecord->url];
-            }
-        }
-
-        if (!empty($errorSubscriberUrl)) {
-            return [
-                'error' => 'Failed to post to some subscribers',
-                'subscribers' => $errorSubscriberUrl
-            ];
-        }
-        return ['success' => 'Post sent to subscribers'];
+        Log::info(json_encode($request->all()));
     }
 }

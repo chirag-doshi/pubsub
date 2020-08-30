@@ -2,6 +2,9 @@
 
 namespace Tests\Unit;
 
+use App\Event;
+use App\Events\TopicPublished;
+use App\Repositories\EventRepository;
 use App\Subscriber;
 use Tests\TestCase;
 
@@ -20,24 +23,22 @@ class PublishControllerTest extends TestCase
         $title = $this->faker->sentence;
         $this->post(route('publish', $title), $data)
             ->assertStatus(200)
-            ->assertExactJson(['error' => "No subscribers found"])
+            ->assertExactJson(['success' => "Event published"])
         ;
     }
-    public function testPublishWithSubscribersButInvalidUrl()
+
+    public function testTopicPublishedIsDispatched()
     {
+        \Illuminate\Support\Facades\Event::fake();
         $subscriber = factory(Subscriber::class)->create();
         $data = [
             'message' => $this->faker->sentence
         ];
-        $response = [
-            'error' => "Failed to post to some subscribers",
-            "subscribers" => [$subscriber->url]
-            ];
         $title = $subscriber->topic;
-        $this->post(route('publish', $title), $data)
-            ->assertStatus(200)
-            ->assertExactJson($response)
-        ;
+        $this->post(route('publish', $title), $data);
+
+        \Illuminate\Support\Facades\Event::assertDispatched(TopicPublished::class);
+
     }
 
 }

@@ -3,9 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="843ff2e6-7729-4b6e-bf38-162d2ded4217" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PublishController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PublishController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubscriptionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SubscriptionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Subscriber.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Subscriber.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/PublishControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/PublishControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/SubscriptionControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/SubscriptionControllerTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +148,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/Feature" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -157,7 +169,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598699461455</updated>
-      <workItem from="1598699464324" duration="24777000" />
+      <workItem from="1598699464324" duration="34234000" />
     </task>
     <servers />
   </component>
@@ -165,22 +177,25 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1156" y="23" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598726092611">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state x="1156" y="0" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598796609919">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="1156" y="0" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050/1680.-180.1920.1080@0.0.1680.1050" timestamp="1598796609919" />
     <state x="1156" y="23" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1680.1027/1680.-180.1920.1080@1680.-180.1920.1080" timestamp="1598726092611" />
-    <state x="932" y="140" width="508" height="353" key="NewPhpClassDialog" timestamp="1598731316734">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="1087" y="163" width="508" height="353" key="NewPhpClassDialog" timestamp="1598796579476">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="932" y="140" width="508" height="353" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1598731316734" />
+    <state x="1087" y="163" key="NewPhpClassDialog/0.0.1680.1050/1680.-180.1920.1080@0.0.1680.1050" timestamp="1598796579476" />
     <state x="1172" y="183" width="508" height="353" key="NewPhpClassDialog/0.23.1680.1027/1680.-180.1920.1080@1680.-180.1920.1080" timestamp="1598702328953" />
     <state x="2320" y="-5" width="639" height="729" key="find.popup" timestamp="1598725307398">
       <screen x="1680" y="-180" width="1920" height="1080" />
     </state>
     <state x="2320" y="-5" width="639" height="729" key="find.popup/0.0.1680.1050/1680.-180.1920.1080@1680.-180.1920.1080" timestamp="1598725307398" />
-    <state x="2305" y="61" width="670" height="676" key="search.everywhere.popup" timestamp="1598726074277">
-      <screen x="1680" y="-180" width="1920" height="1080" />
+    <state x="547" y="234" width="670" height="658" key="search.everywhere.popup" timestamp="1598796871175">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="547" y="234" width="670" height="658" key="search.everywhere.popup/0.0.1680.1050/1680.-180.1920.1080@0.0.1680.1050" timestamp="1598796871175" />
     <state x="2305" y="61" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050/1680.-180.1920.1080@1680.-180.1920.1080" timestamp="1598726074277" />
   </component>
 </project>

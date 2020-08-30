@@ -20,3 +20,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/subscribe/{topic}', 'SubscriptionController@subscribe')->name('subscribe');
 Route::post('/publish/{topic}', 'PublishController@publish')->name('publish');
+
+Route::post('/event', 'PublishController@receiveEvents')->name('event');

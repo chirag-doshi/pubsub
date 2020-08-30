@@ -10,13 +10,4 @@ class Event extends Model
     protected $fillable = ['topic', 'data'];
 
 
-    public function createEvent(Request $request, $topic): Event
-    {
-        $event = new Event;
-        $event->topic = $topic;
-        $event->data = json_encode($request);
-        $event->save();
-
-        return $event;
-    }
 }

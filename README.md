@@ -13,6 +13,7 @@ PubSub is a small api app for publishing and subscribing built on laravel
 - In the .env file update the ``DB_Password=`` to ``DB_Password=YourMysqlPassword`` add the actual password
 - Migrate the database ```php artisan migrate```
 - Run ```php artisan serve ``` this will enable the application to be run from http://localhost:8000
+    - or run the bash script ./start-server.sh
 
 ## Available endpoints
 
@@ -27,6 +28,8 @@ PubSub is a small api app for publishing and subscribing built on laravel
     
     The above code would publish on whatever is passed in the body (as JSON) to the supplied topic in the URL. This endpoint should trigger a forwarding of the data in the body to all of the currently subscribed URL's for that topic.
 
+## Event endpoint
+- The ``/event`` endpoint has been created but the post data received would show in app->storage->logs->laravel.log
 ## Unit Tests
 - Unit tests can be run from the root directory with command ```phpunit```
 ## License
