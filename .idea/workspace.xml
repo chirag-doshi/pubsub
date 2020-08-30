@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="843ff2e6-7729-4b6e-bf38-162d2ded4217" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PublishController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PublishController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +157,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598699461455</updated>
-      <workItem from="1598699464324" duration="23721000" />
+      <workItem from="1598699464324" duration="24777000" />
     </task>
     <servers />
   </component>
@@ -172,9 +169,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="1156" y="23" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1680.1027/1680.-180.1920.1080@1680.-180.1920.1080" timestamp="1598726092611" />
-    <state x="1172" y="183" width="508" height="353" key="NewPhpClassDialog" timestamp="1598702328953">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state x="932" y="140" width="508" height="353" key="NewPhpClassDialog" timestamp="1598731316734">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="932" y="140" width="508" height="353" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1598731316734" />
     <state x="1172" y="183" width="508" height="353" key="NewPhpClassDialog/0.23.1680.1027/1680.-180.1920.1080@1680.-180.1920.1080" timestamp="1598702328953" />
     <state x="2320" y="-5" width="639" height="729" key="find.popup" timestamp="1598725307398">
       <screen x="1680" y="-180" width="1920" height="1080" />
